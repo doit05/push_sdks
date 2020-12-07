@@ -3,6 +3,7 @@
 支持小米、华为、vivo、oppo、魅族、苹果、fcm推送
 
 推送配置：
+```
 type PushServerCfg struct {
 	Name                    string `yaml:"name"`
 	Redirect                string `yaml:"redirect"`
@@ -17,3 +18,4 @@ type PushServerCfg struct {
 	ExtraConfigFilePassword string `yaml:"extra_config_file_password"`
 	TestMod                 bool   `yaml:"test_mod"`
 }
+```
