@@ -4,7 +4,7 @@ import (
 	"errors"
 	"regexp"
 
-	model "push_go/push_sdks/common"
+	model "push_sdks/common"
 )
 
 var (

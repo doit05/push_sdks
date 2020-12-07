@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	model "push_go/push_sdks/common"
+	model "push_sdks/common"
 )
 
 func sendNotifyMessage(tokens []string) {

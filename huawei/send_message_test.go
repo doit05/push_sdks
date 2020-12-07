@@ -6,11 +6,10 @@ import (
 	"fmt"
 	"testing"
 
-	model "push_go/push_sdks/common"
+	model "push_sdks/common"
 )
 
 func TestGetPushClient(t *testing.T) {
-	createClient()
 	if client == nil {
 		t.Fatal("init client error ")
 	}

@@ -1,9 +1,9 @@
 package meizupush
 
 import (
-	"push_go/clients"
-	"push_go/config"
-	"push_go/push_sdks/common"
+	"push_sdks/clients"
+	"push_sdks/config"
+	"push_sdks/common"
 	"encoding/json"
 	"fmt"
 	"net/http"

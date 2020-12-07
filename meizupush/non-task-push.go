@@ -1,7 +1,7 @@
 package meizupush
 
 import (
-	"push_go/clients"
+	"push_sdks/clients"
 	"bytes"
 	"encoding/json"
 	"net/http"

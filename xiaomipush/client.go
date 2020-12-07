@@ -1,7 +1,7 @@
 package xiaomipush
 
 import (
-	"push_go/push_sdks/common"
+	"push_sdks/common"
 	"bytes"
 	"encoding/json"
 	"errors"

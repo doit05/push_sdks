@@ -1,7 +1,7 @@
 package huawei
 
 import (
-	"push_go/clients"
+	"push_sdks/clients"
 	"context"
 	"encoding/json"
 	"errors"
@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"reflect"
 
-	"push_go/config"
+	"push_sdks/config"
 )
 
 type HttpPushClient struct {

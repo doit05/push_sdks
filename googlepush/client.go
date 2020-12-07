@@ -1,8 +1,8 @@
 package googlepush
 
 import (
-	"push_go/config"
-	"push_go/push_sdks/common"
+	"push_sdks/config"
+	"push_sdks/common"
 	"fmt"
 	"net/http"
 

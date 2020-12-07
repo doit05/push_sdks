@@ -1,13 +1,13 @@
 package huawei
 
 import (
-	"push_go/clients"
+	"push_sdks/clients"
 	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
 
-	model "push_go/push_sdks/common"
+	model "push_sdks/common"
 )
 
 // SendMessage sends a message to huawei cloud common

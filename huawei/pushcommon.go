@@ -1,7 +1,7 @@
 package huawei
 
 import (
-	"push_go/config"
+	"push_sdks/config"
 	"fmt"
 	"sync"
 )

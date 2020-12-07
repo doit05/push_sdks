@@ -1,7 +1,7 @@
 package huawei
 
 import (
-	"push_go/clients"
+	"push_sdks/clients"
 	"context"
 	"encoding/json"
 	"errors"
@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"push_go/config"
+	"push_sdks/config"
 )
 
 type AuthClient struct {

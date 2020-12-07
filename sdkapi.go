@@ -7,16 +7,15 @@ import (
 	"strings"
 	"sync"
 
-	"push_go/apps"
-	"push_go/config"
-	"push_go/push_sdks/applepush"
-	"push_go/push_sdks/common"
-	"push_go/push_sdks/googlepush"
-	"push_go/push_sdks/huawei"
-	"push_go/push_sdks/meizupush"
-	"push_go/push_sdks/oppopush"
-	"push_go/push_sdks/vivopush"
-	"push_go/push_sdks/xiaomipush"
+	"push_sdks/applepush"
+	"push_sdks/common"
+	"push_sdks/config"
+	"push_sdks/googlepush"
+	"push_sdks/huawei"
+	"push_sdks/meizupush"
+	"push_sdks/oppopush"
+	"push_sdks/vivopush"
+	"push_sdks/xiaomipush"
 
 	log "github.com/sirupsen/logrus"
 )
@@ -38,21 +37,6 @@ const (
 	MAX_BATCH_MSG_NUM    = 800
 )
 
-func InitPushServersByServers(servers map[string]SdkApi) error {
-	for name, val := range servers {
-		sdk := val
-		_, exist := pushServers.LoadOrStore(name, sdk)
-		if exist {
-			pushServers.Delete(name)
-			pushServers.Store(name, sdk)
-			pushServers.Delete("md5_" + name)
-		}
-		pushServers.Store("md5_"+name, name)
-		log.WithField("server", name).WithField("md5_"+name, name).Debugf("push server config init")
-		defaultName = name
-	}
-	return nil
-}
 
 func InitPushServers(cfg []config.PushServerCfg) (err error) {
 	pushConfigServers = make(map[string]*config.PushServerCfg, len(cfg))
@@ -147,7 +131,7 @@ func GetDefultName() string {
 
 func GetPushSdkByName(packageName, name string) SdkApi {
 	if packageName == "" {
-		packageName = apps.GetDefaultAppPackageByDeviceVendor(name)
+		packageName = defaultName
 	}
 
 	serverKey := name + "_" + packageName

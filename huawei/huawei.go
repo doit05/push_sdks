@@ -5,9 +5,9 @@ https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Examples-V5/ser
 package huawei
 
 import (
-	"push_go/config"
-	"push_go/push_sdks/common"
-	model "push_go/push_sdks/common"
+	"push_sdks/config"
+	"push_sdks/common"
+	model "push_sdks/common"
 	"context"
 	"encoding/json"
 	"fmt"
